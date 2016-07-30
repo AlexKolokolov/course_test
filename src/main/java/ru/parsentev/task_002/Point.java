@@ -3,6 +3,10 @@ package ru.parsentev.task_002;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+import static java.lang.Math.*;
 import static org.slf4j.LoggerFactory.getLogger;
 
 /**
@@ -26,6 +30,6 @@ public class Point {
     }
 
     public double squareDistanceTo(final Point point) {
-        return Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2);
+        return (Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2);
     }
 }
