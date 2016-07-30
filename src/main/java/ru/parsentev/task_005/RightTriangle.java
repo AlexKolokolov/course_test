@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.parsentev.task_002.Point;
 import ru.parsentev.task_003.Triangle;
+import ru.parsentev.task_019.Maze;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
@@ -22,6 +23,10 @@ public class RightTriangle extends Triangle {
 
     @Override
     public boolean exists() {
-        return super.exists();
+        if (!super.exists()) return false;
+        double a2 = getFirst().squareDistanceTo(getSecond());
+        double b2 = getFirst().squareDistanceTo(getThird());
+        double c2 = getSecond().squareDistanceTo(getThird());
+        return a2 + b2 == c2 || a2 + c2 == b2 || b2 + c2 == a2;
     }
 }
