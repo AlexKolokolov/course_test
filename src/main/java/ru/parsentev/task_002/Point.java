@@ -30,6 +30,6 @@ public class Point {
     }
 
     public double squareDistanceTo(final Point point) {
-        return (Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2);
+        return Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2);
     }
 }
